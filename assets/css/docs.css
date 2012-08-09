@@ -14,7 +14,7 @@ body {
   background-color: #fff;
   background-image: url(../img/grid-18px-masked.png);
   background-repeat: repeat-x;
-  background-position: 0 40px;
+  background-position: 0 30px;
 }
 
 
@@ -76,9 +76,9 @@ hr.soften {
   font-weight: normal;
   padding: 14px 24px;
   margin-right: 10px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 .jumbotron .btn-large small {
   font-size: 14px;
@@ -129,9 +129,9 @@ hr.soften {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
   background-image: linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* W3C */
   border: 1px solid #e5e5e5;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 .subnav .nav {
   margin-bottom: 0;
@@ -182,7 +182,7 @@ hr.soften {
 @media (min-width: 980px) {
   .subnav-fixed {
     position: fixed;
-    top: 40px;
+    top: 30px;
     left: 0;
     right: 0;
     z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
@@ -295,9 +295,9 @@ hr.soften {
 .show-grid [class*="span"] {
   background-color: #eee;
   text-align: center;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
   min-height: 30px;
   line-height: 30px;
 }
@@ -317,9 +317,9 @@ hr.soften {
 -------------------------------------------------- */
 .mini-layout {
   border: 1px solid #ddd;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
           box-shadow: 0 1px 2px rgba(0,0,0,.075);
@@ -330,9 +330,9 @@ hr.soften {
   padding: 9px;
 }
 .mini-layout div {
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 .mini-layout .mini-layout-body {
   background-color: #dceaf4;
@@ -414,9 +414,9 @@ hr.soften {
   padding: 6px 10px 6px 25px;
   color: #555;
   background-color: #f9f9f9;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
   cursor: pointer;
 }
 .download .checkbox:hover {
@@ -458,9 +458,9 @@ hr.soften {
   font-size: 30px;
   line-height: 1;
   text-align: center;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
 
@@ -477,9 +477,9 @@ hr.soften {
   width: 30px;
   height: 20px;
   margin: -6px 0;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 /* For white swatches, give a border */
 .swatch-bordered {
@@ -604,9 +604,9 @@ form.well {
   color: #999;
   text-align: center;
   border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 .responsive-utilities-test li + li {
   margin-left: 10px;
@@ -617,9 +617,9 @@ form.well {
   left:   -1px;
   right:  -1px;
   bottom: -1px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 .responsive-utilities-test span {
   color: #468847;
