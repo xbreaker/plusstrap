@@ -204,17 +204,77 @@
   #gradient > .vertical(@btnDangerBackground, #B0281A);
   border: 1px solid #992A1B;
 }
+
 // Success appears as green
-.btn-success {
-  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+.btn-success, .btn-success:focus {
+  #gradient > .vertical(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+  border: 1px solid #29691D;
+  color: white !important;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  #gradient > .vertical(@btnSuccessBackground, @btnSuccessBackgroundHover);
+  border: 1px solid #2D6200;
+  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-success:active,
+.btn-success.active {
+  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
+}
+
 // Info appears as a neutral blue
-.btn-info {
-  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+.btn-info, .btn-info:focus {
+  #gradient > .vertical(@btnInfoBackground, @btnInfoBackgroundHighlight);
+  border: 1px solid #50ACCF;
+  color: white !important;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
+
+.btn-info:hover,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  #gradient > .vertical(@btnInfoBackground, @btnInfoBackgroundHover);
+  border: 1px solid #489FC0;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
+}
+
+.btn-info:active,
+.btn-info.active {
+  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .2)");
+}
+
 // Inverse appears as dark gray
-.btn-inverse {
-  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+.btn-inverse, .btn-inverse:focus {
+  #gradient > .vertical(@btnInverseBackground, @btnInverseBackgroundHighlight);
+  border: 1px solid #444;
+  color: white !important;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  #gradient > .vertical(@btnInverseBackground, @btnInverseBackgroundHover);
+  border: 1px solid #333;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
 }
 
 
