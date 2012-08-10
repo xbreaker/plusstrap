@@ -51,10 +51,8 @@
   list-style: none;
   background-color: @dropdownBackground;
   border: 1px solid #ccc; // Fallback for IE7-8
-  border: 1px solid @dropdownBorder;
   *border-right-width: 2px;
   *border-bottom-width: 2px;
-  .border-radius(6px);
   .box-shadow(0 5px 10px rgba(0,0,0,.2));
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
@@ -74,13 +72,20 @@
   // Links within the dropdown menu
   a {
     display: block;
-    padding: 3px 20px;
+    padding: 4px 7em 4px 30px;
     clear: both;
     font-weight: normal;
     line-height: @baseLineHeight;
     color: @dropdownLinkColor;
     white-space: nowrap;
   }
+}
+
+// For icons
+.dropdown-menu li > a [class^="icon-"], .dropdown-menu li > a [class*=" icon-"] {
+  margin-left: -20px;
+  margin-right: 3px;
+  opacity: .75;
 }
 
 // Hover state
@@ -91,7 +96,6 @@
   text-decoration: none;
   color: @dropdownLinkColorHover;
   background-color: @dropdownLinkBackgroundHover;
-  #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
 }
 
 // Active state
@@ -102,7 +106,6 @@
   text-decoration: none;
   outline: 0;
   background-color: @dropdownLinkBackgroundActive;
-  #gradient > .vertical(@dropdownLinkBackgroundActive, darken(@dropdownLinkBackgroundActive, 5%));
 }
 
 // Disabled state
@@ -168,9 +171,6 @@
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
-  -webkit-border-radius: 0 6px 6px 6px;
-     -moz-border-radius: 0 6px 6px 6px;
-          border-radius: 0 6px 6px 6px;
 }
 .dropdown-submenu:hover .dropdown-menu {
   display: block;
@@ -206,5 +206,5 @@
 // ---------
 .typeahead {
   margin-top: 2px; // give it some space to breathe
-  .border-radius(4px);
+  .border-radius(2px);
 }
