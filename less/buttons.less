@@ -10,11 +10,12 @@
 .btn {
   display: inline-block;
   .ie7-inline-block();
-  padding: 4px 14px;
+  padding: 0px 8px;
   margin-bottom: 0; // For input.btn
-  font-size: ( @baseFontSize - 2 );
-  line-height: @baseLineHeight;
-  *line-height: @baseLineHeight;
+  font-size: @baseFontSize - 2px;
+  font-weight: bold;
+  line-height: @baseLineHeight + 2px;
+  *line-height: @baseLineHeight + 2px;
   text-align: center;
   text-decoration: none !important;
   vertical-align: middle;
@@ -31,25 +32,21 @@
 
   // Hover state
   &:hover {
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
-       -moz-box-shadow: 0 1px 1px rgba(0,0,0,.1);
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
     border: 1px solid #C6C6C6;
-    .buttonBackground(lighten(@btnBackgroundHighlight, 2.8%), @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
-  }
-
-  // Focus state for keyboard and accessibility
-  &:focus {
-    .tab-focus();
+    #gradient > .vertical(lighten(@btnBackgroundHighlight, 2.8%), @btnBackgroundHighlight);
+    color: @grayDark;
   }
 
   // Active state
+  &:focus,
   &.active,
   &:active {
-    .buttonBackground(#EEE, #E0E0E0, #333, 0 1px 1px rgba(255,255,255,.75));
+    #gradient > .vertical(#EEE, #E0E0E0);
     border-color: #CCC;
     outline: 0;
-    .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .1)");
+    .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .2)");
+    color: @grayDark;
   }
 
   // Disabled state
@@ -73,7 +70,6 @@
   padding: 9px 14px;
   font-size: @baseFontSize + 2px;
   line-height: normal;
-  .border-radius(5px);
 }
 .btn-large [class^="icon-"] {
   margin-top: 1px;
@@ -122,23 +118,91 @@
   color: rgba(255,255,255,.75);
 }
 
+//cool focus for all non default buttons
+.btn-primary:focus,
+.btn-warning:focus,
+.btn-danger:focus,
+.btn-success:focus,
+.btn-info:focus,
+.btn-inverse:focus {
+  border: 1px solid #4D90FE;
+  .box-shadow(~"inset 0 0 0 1px rgba(255, 255, 255, .5)");
+  outline: none;
+}
+
 // Set the backgrounds
 // -------------------------
-.btn {
-  // reset here as of 2.0.3 due to Recess property order
-  border-color: #c5c5c5;
-  border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
+.btn-primary, .btn-primary:focus {
+  #gradient > .vertical(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+  border: 1px solid #3079ED;
+  color: white !important;
 }
-.btn-primary {
-  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  border-color: #2F5BB7;
+  #gradient > .vertical(@btnPrimaryBackground, @btnPrimaryBackgroundHover);
+  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }
+
+.btn-primary:active,
+.btn-primary.active {
+  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
+}
+
 // Warning appears are orange
-.btn-warning {
-  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+.btn-warning, .btn-warning:focus {
+  #gradient > .vertical(@btnWarningBackground, @btnWarningBackgroundHighlight);
+  border: 1px solid #F89406;
+  color: white !important;
 }
+
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  border-color: #E98B06;
+  #gradient > .vertical(@btnWarningBackground, @btnWarningBackgroundHover);
+  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-warning:active,
+.btn-warning.active {
+  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .2)");
+}
+
 // Danger and error appear as red
-.btn-danger {
-  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+.btn-danger, .btn-danger:focus {
+  #gradient > .vertical(@btnDangerBackground, @btnDangerBackgroundHighlight);
+  border: 1px solid #B0281A;
+  color: white !important;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+  border-color: #B0281A;
+  border-bottom-color: #AF301F;
+  #gradient > .vertical(@btnDangerBackground, @btnDangerBackgroundHover);
+  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .2)");
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-danger:active,
+.btn-danger.active {
+  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
+  background-color: #B0281A;
+  #gradient > .vertical(@btnDangerBackground, #B0281A);
+  border: 1px solid #992A1B;
 }
 // Success appears as green
 .btn-success {
