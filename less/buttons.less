@@ -134,8 +134,7 @@
 // -------------------------
 .btn-primary, .btn-primary:focus {
   #gradient > .vertical(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
-  border: 1px solid #3079ED;
-  color: white !important;
+  .buttonMain(#3079ed, .1 );
 }
 
 .btn-primary:hover,
@@ -157,8 +156,7 @@
 // Warning appears are orange
 .btn-warning, .btn-warning:focus {
   #gradient > .vertical(@btnWarningBackground, @btnWarningBackgroundHighlight);
-  border: 1px solid #F89406;
-  color: white !important;
+  .buttonMain(#f89406, .1 );
 }
 
 .btn-warning:hover,
@@ -180,9 +178,7 @@
 // Danger and error appear as red
 .btn-danger, .btn-danger:focus {
   #gradient > .vertical(@btnDangerBackground, @btnDangerBackgroundHighlight);
-  border: 1px solid #B0281A;
-  color: white !important;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  .buttonMain(#b0281a, .1 );
 }
 
 .btn-danger:hover,
@@ -208,9 +204,7 @@
 // Success appears as green
 .btn-success, .btn-success:focus {
   #gradient > .vertical(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
-  border: 1px solid #29691D;
-  color: white !important;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  .buttonMain(#29691d, .1 );
 }
 
 .btn-success:hover,
@@ -232,9 +226,7 @@
 // Info appears as a neutral blue
 .btn-info, .btn-info:focus {
   #gradient > .vertical(@btnInfoBackground, @btnInfoBackgroundHighlight);
-  border: 1px solid #50ACCF;
-  color: white !important;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  .buttonMain(#50accf, .1 );
 }
 
 .btn-info:hover,
@@ -256,9 +248,7 @@
 // Inverse appears as dark gray
 .btn-inverse, .btn-inverse:focus {
   #gradient > .vertical(@btnInverseBackground, @btnInverseBackgroundHighlight);
-  border: 1px solid #444;
-  color: white !important;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  .buttonMain(#444, .1 );
 }
 
 .btn-inverse:hover,

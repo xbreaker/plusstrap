@@ -2546,8 +2546,9 @@ button.close {
   background-image: linear-gradient(to bottom, #4d90fe, #4787ed);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4d90fe', endColorstr='#ff4787ed', GradientType=0);
-  border: 1px solid #3079ED;
+  border: 1px solid #3079ed;
   color: white !important;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
 .btn-primary:hover,
 .btn-primary:active,
@@ -2584,8 +2585,9 @@ button.close {
   background-image: linear-gradient(to bottom, #fbb450, #f5ab3f);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff5ab3f', GradientType=0);
-  border: 1px solid #F89406;
+  border: 1px solid #f89406;
   color: white !important;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
 .btn-warning:hover,
 .btn-warning:active,
@@ -2622,7 +2624,7 @@ button.close {
   background-image: linear-gradient(to bottom, #dd4b39, #d14836);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdd4b39', endColorstr='#ffd14836', GradientType=0);
-  border: 1px solid #B0281A;
+  border: 1px solid #b0281a;
   color: white !important;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -2672,7 +2674,7 @@ button.close {
   background-image: linear-gradient(to bottom, #3d9400, #398a00);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3d9400', endColorstr='#ff398a00', GradientType=0);
-  border: 1px solid #29691D;
+  border: 1px solid #29691d;
   color: white !important;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -2711,7 +2713,7 @@ button.close {
   background-image: linear-gradient(to bottom, #5bc0de, #57b6db);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff57b6db', GradientType=0);
-  border: 1px solid #50ACCF;
+  border: 1px solid #50accf;
   color: white !important;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -2750,7 +2752,7 @@ button.close {
   background-image: linear-gradient(to bottom, #555555, #514b52);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff555555', endColorstr='#ff514b52', GradientType=0);
-  border: 1px solid #444;
+  border: 1px solid #444444;
   color: white !important;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
