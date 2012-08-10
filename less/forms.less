@@ -122,10 +122,9 @@ input[type="color"],
 
   // Focus state
   &:focus {
-    border-color: rgba(82,168,236,.8);
+    border-color: #4d90fe;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
   }
 }
 
@@ -498,7 +497,7 @@ select:focus:required:invalid {
   padding-left: 14px;
   padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
   margin-bottom: 0; // Remove the default margin on all inputs
-  .border-radius(15px);
+  .border-radius(2px);
 }
 
 /* Allow for input prepend/append in search forms */
@@ -507,16 +506,16 @@ select:focus:required:invalid {
   .border-radius(0); // Override due to specificity
 }
 .form-search .input-append .search-query {
-  .border-radius(14px 0 0 14px)
+  .border-radius(1px 0 0 1px)
 }
 .form-search .input-append .btn {
-  .border-radius(0 14px 14px 0)
+  .border-radius(0 1px 1px 0)
 }
 .form-search .input-prepend .search-query {
-  .border-radius(0 14px 14px 0)
+  .border-radius(0 1px 1px 0)
 }
 .form-search .input-prepend .btn {
-  .border-radius(14px 0 0 14px)
+  .border-radius(1px 0 0 1px)
 }
 
 
