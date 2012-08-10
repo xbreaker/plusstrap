@@ -3802,9 +3802,14 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .btn {
   display: inline-block;
-  padding: 4px 10px 4px;
+  padding: 0px 10px 0px;
   margin: 5px 5px 6px;
   line-height: 18px;
+}
+
+.navbar .btn .caret {
+  margin-top: 8px;
+  margin-left: 0;
 }
 
 .navbar .btn-group {
