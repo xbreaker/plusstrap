@@ -139,6 +139,7 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 a {
   color: #4d90fe;
@@ -2402,7 +2403,6 @@ button.close {
   *margin-left: .3em;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -webkit-font-smoothing: antialiased;
 }
 .btn:hover,
 .btn:active,
