@@ -4278,9 +4278,6 @@ a.thumbnail:hover {
 }
 .label {
   padding: 1px 4px 2px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 .badge {
   padding: 1px 9px 2px;
@@ -4296,43 +4293,43 @@ a.badge:hover {
 }
 .label-important,
 .badge-important {
-  background-color: #b94a48;
+  background-color: #dd4b39;
 }
 .label-important[href],
 .badge-important[href] {
-  background-color: #953b39;
+  background-color: #c23321;
 }
 .label-warning,
 .badge-warning {
-  background-color: #f89406;
+  background-color: #fbb450;
 }
 .label-warning[href],
 .badge-warning[href] {
-  background-color: #c67605;
+  background-color: #fa9f1e;
 }
 .label-success,
 .badge-success {
-  background-color: #468847;
+  background-color: #3d9400;
 }
 .label-success[href],
 .badge-success[href] {
-  background-color: #356635;
+  background-color: #286100;
 }
 .label-info,
 .badge-info {
-  background-color: #3a87ad;
+  background-color: #5bc0de;
 }
 .label-info[href],
 .badge-info[href] {
-  background-color: #2d6987;
+  background-color: #31b0d5;
 }
 .label-inverse,
 .badge-inverse {
-  background-color: #333333;
+  background-color: #555555;
 }
 .label-inverse[href],
 .badge-inverse[href] {
-  background-color: #1a1a1a;
+  background-color: #3b3b3b;
 }
 .btn .label,
 .btn .badge {
@@ -4649,9 +4646,9 @@ a.badge:hover {
   padding: 60px;
   margin-bottom: 30px;
   background-color: #eeeeee;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 .hero-unit h1 {
   margin-bottom: 0;
