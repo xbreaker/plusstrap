@@ -3540,12 +3540,12 @@ input[type="submit"].btn.btn-mini {
 }
 
 .tabs-left > .nav-tabs > li > a:hover {
-  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+  border-color: #eeeeee #dddddd #eeeeee #dd4b39;
 }
 
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: transparent #ddd transparent #DD4B39;
+  border-color: transparent #ddd transparent #dd4b39;
   *border-right-color: #ffffff;
 }
 

@@ -110,23 +110,24 @@
 }
 // Actual tabs (as links)
 .nav-tabs > li > a {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   line-height: @baseLineHeight;
   border: 1px solid transparent;
-  .border-radius(4px 4px 0 0);
   &:hover {
-    border-color: @grayLighter @grayLighter #ddd;
+    border-color: @grayLighter @grayLighter #dd4b39;
   }
 }
 // Active state, and it's :hover to override normal :hover
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
-  color: @gray;
+  color: #dd4b39;
   background-color: @white;
   border: 1px solid #ddd;
-  border-bottom-color: transparent;
+  border-bottom-color: #dd4b39;
+  border-top-color: transparent;
   cursor: default;
+  font-weight: bold;
 }
 
 
@@ -135,11 +136,11 @@
 
 // Links rendered as pills
 .nav-pills > li > a {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   margin-top: 2px;
   margin-bottom: 2px;
-  .border-radius(5px);
+  .border-radius(2px);
 }
 
 // Active state
@@ -171,10 +172,10 @@
   .border-radius(0);
 }
 .nav-tabs.nav-stacked > li:first-child > a {
-  .border-top-radius(4px);
+  .border-top-radius(2px);
 }
 .nav-tabs.nav-stacked > li:last-child > a {
-  .border-bottom-radius(4px);
+  .border-bottom-radius(2px);
 }
 .nav-tabs.nav-stacked > li > a:hover {
   border-color: #ddd;
@@ -195,10 +196,10 @@
 // ---------
 
 .nav-tabs .dropdown-menu {
-  .border-radius(0 0 6px 6px); // remove the top rounded corners here since there is a hard edge above the menu
+  .border-radius(0px); // remove the top rounded corners here since there is a hard edge above the menu
 }
 .nav-pills .dropdown-menu {
-  .border-radius(6px); // make rounded corners match the pills
+  .border-radius(0px); // make rounded corners match the pills
 }
 
 // Default dropdown links
@@ -303,15 +304,14 @@
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
-  .border-radius(0 0 4px 4px);
   &:hover {
     border-bottom-color: transparent;
-    border-top-color: #ddd;
+    border-top-color: #dd4b39;
   }
 }
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: #dd4b39 #ddd transparent #ddd;
 }
 
 // LEFT & RIGHT
@@ -337,14 +337,13 @@
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
-  .border-radius(4px 0 0 4px);
 }
 .tabs-left > .nav-tabs > li > a:hover {
-  border-color: @grayLighter #ddd @grayLighter @grayLighter;
+  border-color: @grayLighter #ddd @grayLighter #dd4b39;
 }
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: transparent #ddd transparent #dd4b39;
   *border-right-color: @white;
 }
 
@@ -359,11 +358,11 @@
   .border-radius(0 4px 4px 0);
 }
 .tabs-right > .nav-tabs > li > a:hover {
-  border-color: @grayLighter @grayLighter @grayLighter #ddd;
+  border-color: @grayLighter #dd4b39 @grayLighter #ddd;
 }
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: transparent #dd4b39 transparent #ddd;
   *border-left-color: @white;
 }
 
