@@ -23,10 +23,11 @@
   min-height: @navbarHeight;
   padding-left:  20px;
   padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
   border: 1px solid @navbarBorder;
-  .border-radius(4px);
-  .box-shadow(0 1px 4px rgba(0,0,0,.065));
+  background-color: #2d2d2d;
+  background-repeat: repeat-x;
+  .border-radius(2px);
+  .box-shadow(~"0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)");
 }
 
 // Set width to auto for default container
@@ -49,7 +50,7 @@
   // Vertically center the text given @navbarHeight
   @elementHeight: 20px;
   @heightDifference: @navbarHeight - @elementHeight;
-  padding: ((@heightDifference / 2) - 2) 20px ((@heightDifference / 2) + 2);
+  padding: ((@heightDifference / 2) - 1) 20px ((@heightDifference / 2) + 1);
   margin-left: -20px; // negative indent to left-align the text down the page
   font-size: 20px;
   font-weight: 200;
@@ -200,10 +201,11 @@
   float: none;
   // Vertically center the text given @navbarHeight
   @elementHeight: 20px;
-  padding: ((@navbarHeight - @elementHeight) / 2) 15px ((@navbarHeight - @elementHeight) / 2);
+  padding: ((@navbarHeight - @elementHeight) / 2) 10px ((@navbarHeight - @elementHeight) / 2) + 1;
   color: @navbarLinkColor;
   text-decoration: none;
   text-shadow: 0 1px 0 @navbarBackgroundHighlight;
+  font-weight: bold;
 }
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 8px;
@@ -223,7 +225,7 @@
 .navbar .nav .active > a:focus {
   color: @navbarLinkColorActive;
   text-decoration: none;
-  background-color: @navbarLinkBackgroundActive;
+  //background-color: @navbarLinkBackgroundActive;
   -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
      -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
           box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
