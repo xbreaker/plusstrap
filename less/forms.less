@@ -79,11 +79,11 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: @baseLineHeight;
-  padding: 4px 6px;
+  height: @baseLineHeight - 6;
+  padding: 5px 6px 3px;
   margin-bottom: 9px;
   font-size: @baseFontSize;
-  line-height: @baseLineHeight;
+  line-height: @baseLineHeight - 6;
   color: @gray;
   .border-radius(@inputBorderRadius);
 }
@@ -150,9 +150,10 @@ input[type="checkbox"] {
 // Set the height of select and file controls to match text inputs
 select,
 input[type="file"] {
-  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  height: 24px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
   *margin-top: 4px; /* For IE7, add top margin to align select with labels */
-  line-height: 28px;
+  line-height: 24px;
+  padding: 2px 6px;
 }
 
 // Make select elements obey height by applying a border
@@ -424,12 +425,12 @@ select:focus:required:invalid {
   .add-on {
     display: inline-block;
     width: auto;
-    height: @baseLineHeight;
+    height: @baseLineHeight - 6;
     min-width: 16px;
     padding: 4px 5px;
     font-size: @baseFontSize;
     font-weight: normal;
-    line-height: @baseLineHeight;
+    line-height: @baseLineHeight - 6;
     text-align: center;
     text-shadow: 0 1px 0 @white;
     vertical-align: middle;
