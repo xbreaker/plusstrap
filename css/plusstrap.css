@@ -1181,8 +1181,6 @@ select:focus:required:invalid:focus {
 .help-inline {
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
   vertical-align: middle;
   padding-left: 5px;
@@ -1352,8 +1350,6 @@ select:focus:required:invalid:focus {
 .form-horizontal .input-append {
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
   margin-bottom: 0;
   vertical-align: middle;
@@ -2361,8 +2357,6 @@ button.close {
 .btn {
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
   padding: 0px 8px;
   font-weight: bold;
@@ -2386,8 +2380,6 @@ button.close {
   border-color: #f1f1f1 #f1f1f1 #cbcbcb;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #f1f1f1;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border: 1px solid rgba(0, 0, 0, 0.1);
   *border: 0;
@@ -2396,6 +2388,16 @@ button.close {
   -moz-border-radius: 2px;
   border-radius: 2px;
   *margin-left: .3em;
+}
+.btn:not(.active):hover {
+  background-color: #f9f9f9;
+  background-image: -moz-linear-gradient(top, #ffffff, #f1f1f1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f1f1f1);
+  background-image: -o-linear-gradient(top, #ffffff, #f1f1f1);
+  background-image: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff1f1f1', GradientType=0);
 }
 .btn:hover,
 .btn:active,
@@ -2424,8 +2426,6 @@ button.close {
   text-decoration: none;
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
-  /* Buttons in IE7 don't get borders, so darken on hover */
-
   -webkit-transition: background-position 0.1s linear;
   -moz-transition: background-position 0.1s linear;
   -o-transition: background-position 0.1s linear;
@@ -2524,9 +2524,17 @@ button.close {
   border-color: #4787ed #4787ed #155ed3;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #4787ed;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-primary:not(.active):hover {
+  background-color: #5794f7;
+  background-image: -moz-linear-gradient(top, #619dfe, #4787ed);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#619dfe), to(#4787ed));
+  background-image: -webkit-linear-gradient(top, #619dfe, #4787ed);
+  background-image: -o-linear-gradient(top, #619dfe, #4787ed);
+  background-image: linear-gradient(to bottom, #619dfe, #4787ed);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff619dfe', endColorstr='#ff4787ed', GradientType=0);
 }
 .btn-primary:hover,
 .btn-primary:active,
@@ -2561,9 +2569,17 @@ button.close {
   border-color: #f5ab3f #f5ab3f #dc870b;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #f5ab3f;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-warning:not(.active):hover {
+  background-color: #f9b655;
+  background-image: -moz-linear-gradient(top, #fbbd64, #f5ab3f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbbd64), to(#f5ab3f));
+  background-image: -webkit-linear-gradient(top, #fbbd64, #f5ab3f);
+  background-image: -o-linear-gradient(top, #fbbd64, #f5ab3f);
+  background-image: linear-gradient(to bottom, #fbbd64, #f5ab3f);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbbd64', endColorstr='#fff5ab3f', GradientType=0);
 }
 .btn-warning:hover,
 .btn-warning:active,
@@ -2598,9 +2614,17 @@ button.close {
   border-color: #d14836 #d14836 #983023;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #d14836;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-danger:not(.active):hover {
+  background-color: #da5342;
+  background-image: -moz-linear-gradient(top, #e05b4a, #d14836);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e05b4a), to(#d14836));
+  background-image: -webkit-linear-gradient(top, #e05b4a, #d14836);
+  background-image: -o-linear-gradient(top, #e05b4a, #d14836);
+  background-image: linear-gradient(to bottom, #e05b4a, #d14836);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe05b4a', endColorstr='#ffd14836', GradientType=0);
 }
 .btn-danger:hover,
 .btn-danger:active,
@@ -2635,9 +2659,17 @@ button.close {
   border-color: #398a00 #398a00 #193d00;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #398a00;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-success:not(.active):hover {
+  background-color: #409c00;
+  background-image: -moz-linear-gradient(top, #45a800, #398a00);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#45a800), to(#398a00));
+  background-image: -webkit-linear-gradient(top, #45a800, #398a00);
+  background-image: -o-linear-gradient(top, #45a800, #398a00);
+  background-image: linear-gradient(to bottom, #45a800, #398a00);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff45a800', endColorstr='#ff398a00', GradientType=0);
 }
 .btn-success:hover,
 .btn-success:active,
@@ -2672,9 +2704,17 @@ button.close {
   border-color: #57b6db #57b6db #2993bd;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #57b6db;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-info:not(.active):hover {
+  background-color: #64c0df;
+  background-image: -moz-linear-gradient(top, #6cc7e1, #57b6db);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6cc7e1), to(#57b6db));
+  background-image: -webkit-linear-gradient(top, #6cc7e1, #57b6db);
+  background-image: -o-linear-gradient(top, #6cc7e1, #57b6db);
+  background-image: linear-gradient(to bottom, #6cc7e1, #57b6db);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6cc7e1', endColorstr='#ff57b6db', GradientType=0);
 }
 .btn-info:hover,
 .btn-info:active,
@@ -2709,9 +2749,17 @@ button.close {
   border-color: #514b52 #514b52 #2a262a;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #514b52;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-inverse:not(.active):hover {
+  background-color: #5a575a;
+  background-image: -moz-linear-gradient(top, #5f5f5f, #514b52);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5f5f5f), to(#514b52));
+  background-image: -webkit-linear-gradient(top, #5f5f5f, #514b52);
+  background-image: -o-linear-gradient(top, #5f5f5f, #514b52);
+  background-image: linear-gradient(to bottom, #5f5f5f, #514b52);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5f5f5f', endColorstr='#ff514b52', GradientType=0);
 }
 .btn-inverse:hover,
 .btn-inverse:active,
@@ -2794,8 +2842,6 @@ input[type="submit"].btn.btn-mini {
 .btn-toolbar .btn-group {
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
 }
 .btn-group > .btn {
@@ -3520,12 +3566,20 @@ input[type="submit"].btn.btn-mini {
   border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: rgba(0, 0, 0, 0.25);
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
+}
+.navbar .btn-navbar:not(.active):hover {
+  background-color: rgba(6, 6, 6, 0.25);
+  background-image: -moz-linear-gradient(top, rgba(10, 10, 10, 0.25), rgba(0, 0, 0, 0.25));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(10, 10, 10, 0.25)), to(rgba(0, 0, 0, 0.25)));
+  background-image: -webkit-linear-gradient(top, rgba(10, 10, 10, 0.25), rgba(0, 0, 0, 0.25));
+  background-image: -o-linear-gradient(top, rgba(10, 10, 10, 0.25), rgba(0, 0, 0, 0.25));
+  background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.25), rgba(0, 0, 0, 0.25));
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#400a0a0a', endColorstr='#40000000', GradientType=0);
 }
 .navbar .btn-navbar:hover,
 .navbar .btn-navbar:active,
@@ -3729,9 +3783,17 @@ input[type="submit"].btn.btn-mini {
   border-color: #040404 #040404 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #040404;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.navbar-inverse .btn-navbar:not(.active):hover {
+  background-color: #151515;
+  background-image: -moz-linear-gradient(top, #1f1f1f, #040404);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1f1f1f), to(#040404));
+  background-image: -webkit-linear-gradient(top, #1f1f1f, #040404);
+  background-image: -o-linear-gradient(top, #1f1f1f, #040404);
+  background-image: linear-gradient(to bottom, #1f1f1f, #040404);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1f1f1f', endColorstr='#ff040404', GradientType=0);
 }
 .navbar-inverse .btn-navbar:hover,
 .navbar-inverse .btn-navbar:active,
@@ -3772,8 +3834,6 @@ input[type="submit"].btn.btn-mini {
 .breadcrumb .box-shadow(~"inset 0 1px 0 #ffffff") li {
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -3791,8 +3851,6 @@ input[type="submit"].btn.btn-mini {
 .pagination ul {
   display: inline-block;
   *display: inline;
-  /* IE7 inline-block hack */
-
   *zoom: 1;
   margin-left: 0;
   margin-bottom: 0;
