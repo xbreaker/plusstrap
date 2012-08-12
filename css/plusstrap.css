@@ -3854,9 +3854,9 @@ input[type="submit"].btn.btn-mini {
   *zoom: 1;
   margin-left: 0;
   margin-bottom: 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -3894,15 +3894,15 @@ input[type="submit"].btn.btn-mini {
 .pagination li:first-child a,
 .pagination li:first-child span {
   border-left-width: 1px;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
 }
 .pagination li:last-child a,
 .pagination li:last-child span {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
 }
 .pagination-centered {
   text-align: center;
@@ -4137,16 +4137,8 @@ input[type="submit"].btn.btn-mini {
   z-index: 1010;
   display: none;
   width: 236px;
-  padding: 1px;
+  padding: 5px;
   background-color: #ffffff;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -4165,15 +4157,11 @@ input[type="submit"].btn.btn-mini {
 }
 .popover-title {
   margin: 0;
-  padding: 8px 14px;
+  padding: 9px 15px;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 18px;
-  background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
 }
 .popover-content {
   padding: 9px 14px;
@@ -4197,55 +4185,55 @@ input[type="submit"].btn.btn-mini {
   z-index: -1;
 }
 .popover.top .arrow {
-  bottom: -10px;
+  bottom: -5px;
   left: 50%;
-  margin-left: -10px;
-  border-width: 10px 10px 0;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
   border-top-color: #ffffff;
 }
 .popover.top .arrow:after {
-  border-width: 11px 11px 0;
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-width: 6px 6px 0;
+  border-top-color: #ffffff;
   bottom: -1px;
-  left: -11px;
+  left: -6px;
 }
 .popover.right .arrow {
   top: 50%;
-  left: -10px;
-  margin-top: -10px;
-  border-width: 10px 10px 10px 0;
+  left: -5px;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
   border-right-color: #ffffff;
 }
 .popover.right .arrow:after {
-  border-width: 11px 11px 11px 0;
-  border-right-color: rgba(0, 0, 0, 0.25);
-  bottom: -11px;
+  border-width: 6px 6px 6px 0;
+  border-right-color: #ffffff;
+  bottom: -6px;
   left: -1px;
 }
 .popover.bottom .arrow {
-  top: -10px;
+  top: -5px;
   left: 50%;
-  margin-left: -10px;
-  border-width: 0 10px 10px;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
   border-bottom-color: #ffffff;
 }
 .popover.bottom .arrow:after {
-  border-width: 0 11px 11px;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-width: 0 6px 6px;
+  border-bottom-color: #ffffff;
   top: -1px;
-  left: -11px;
+  left: -6px;
 }
 .popover.left .arrow {
   top: 50%;
-  right: -10px;
-  margin-top: -10px;
-  border-width: 10px 0 10px 10px;
+  right: -5px;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
   border-left-color: #ffffff;
 }
 .popover.left .arrow:after {
-  border-width: 11px 0 11px 11px;
-  border-left-color: rgba(0, 0, 0, 0.25);
-  bottom: -11px;
+  border-width: 6px 0 6px 6px;
+  border-left-color: #ffffff;
+  bottom: -6px;
   right: -1px;
 }
 .thumbnails {

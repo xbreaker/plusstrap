@@ -281,6 +281,10 @@
         </tbody>
       </table>
 
+      <div class="well">
+        <a href="#" class="btn btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">hover for popover</a>
+      </div>
+
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -299,6 +303,24 @@
     <script src="../../docs/assets/js/bootstrap-collapse.js"></script>
     <script src="../../docs/assets/js/bootstrap-carousel.js"></script>
     <script src="../../docs/assets/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript">
+      $('.popover-test').popover();
+      // popover demo
+      $("a[rel=popover]")
+        .popover()
+        .click(function(e) {
+          e.preventDefault()
+        })
 
+      // button state demo
+      $('#fat-btn')
+        .click(function () {
+          var btn = $(this)
+          btn.button('loading')
+          setTimeout(function () {
+            btn.button('reset')
+          }, 3000)
+        })
+    </script>
   </body>
 </html>
