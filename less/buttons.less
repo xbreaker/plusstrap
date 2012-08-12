@@ -11,49 +11,53 @@
   display: inline-block;
   .ie7-inline-block();
   padding: 0px 8px;
+  font-weight: bold;
   margin-bottom: 0; // For input.btn
   font-size: @baseFontSize - 2px;
-  font-weight: bold;
   line-height: @baseLineHeight + 2px;
   *line-height: @baseLineHeight + 2px;
   text-align: center;
-  text-decoration: none !important;
   vertical-align: middle;
-  cursor: default;
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, #444, 0 1px 1px rgba(255,255,255,.75));
+  cursor: pointer;
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
   border: 1px solid @btnBorder;
   *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  border-bottom-color: darken(@btnBorder, 10%);
   .border-radius(2px);
   .ie7-restore-left-whitespace(); // Give IE7 some love
-  
-  -webkit-user-select: none;
-     -moz-user-select: none;
 
   // Hover state
   &:hover {
-    .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
-    border: 1px solid #C6C6C6;
-    #gradient > .vertical(lighten(@btnBackgroundHighlight, 2.8%), @btnBackgroundHighlight);
     color: @grayDark;
+    text-decoration: none;
+    background-color: darken(@white, 10%);
+    *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+    // transition is only when going to hover, otherwise the background
+    // behind the gradient (there for IE<=9 fallback) gets mismatched
+    .transition(background-position .1s linear);
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .tab-focus();
   }
 
   // Active state
-  &:focus,
   &.active,
   &:active {
-    #gradient > .vertical(#EEE, #E0E0E0);
-    border-color: #CCC;
+    background-color: darken(@white, 10%);
+    background-color: darken(@white, 15%) e("\9");
+    background-image: none;
     outline: 0;
-    .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .2)");
-    color: @grayDark;
   }
 
   // Disabled state
   &.disabled,
   &[disabled] {
     cursor: default;
+    background-color: darken(@white, 10%);
     background-image: none;
-    .opacity(50);
+    .opacity(65);
     .box-shadow(none);
   }
 
@@ -124,146 +128,39 @@
 .btn-success:focus,
 .btn-info:focus,
 .btn-inverse:focus {
-  border: 1px solid #4D90FE;
   .box-shadow(~"inset 0 0 0 1px rgba(255, 255, 255, .5)");
   outline: none;
 }
 
 // Set the backgrounds
 // -------------------------
-.btn-primary, .btn-primary:focus {
-  #gradient > .vertical(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
-  .buttonMain(#3079ed, .1 );
+.btn {
+  // reset here as of 2.0.3 due to Recess property order
+  border-color: #c5c5c5;
+  border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
 }
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.active,
-.btn-primary.disabled,
-.btn-primary[disabled] {
-  border-color: #2F5BB7;
-  #gradient > .vertical(@btnPrimaryBackground, @btnPrimaryBackgroundHover);
-  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+.btn-primary {
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight, #fff, 0 1px 0 darken(@btnPrimaryBackgroundHighlight, 10%));
 }
-
-.btn-primary:active,
-.btn-primary.active {
-  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
-}
-
 // Warning appears are orange
-.btn-warning, .btn-warning:focus {
-  #gradient > .vertical(@btnWarningBackground, @btnWarningBackgroundHighlight);
-  .buttonMain(#f89406, .1 );
+.btn-warning {
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight, #fff, 0 1px 0 darken(@btnWarningBackgroundHighlight, 10%));
 }
-
-.btn-warning:hover,
-.btn-warning:active,
-.btn-warning.active,
-.btn-warning.disabled,
-.btn-warning[disabled] {
-  border-color: #E98B06;
-  #gradient > .vertical(@btnWarningBackground, @btnWarningBackgroundHover);
-  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-}
-
-.btn-warning:active,
-.btn-warning.active {
-  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .2)");
-}
-
 // Danger and error appear as red
-.btn-danger, .btn-danger:focus {
-  #gradient > .vertical(@btnDangerBackground, @btnDangerBackgroundHighlight);
-  .buttonMain(#b0281a, .1 );
+.btn-danger {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight, #fff, 0 1px 0 darken(@btnDangerBackgroundHighlight, 10%));
 }
-
-.btn-danger:hover,
-.btn-danger:active,
-.btn-danger.active,
-.btn-danger.disabled,
-.btn-danger[disabled] {
-  border-color: #B0281A;
-  border-bottom-color: #AF301F;
-  #gradient > .vertical(@btnDangerBackground, @btnDangerBackgroundHover);
-  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .2)");
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-}
-
-.btn-danger:active,
-.btn-danger.active {
-  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
-  background-color: #B0281A;
-  #gradient > .vertical(@btnDangerBackground, #B0281A);
-  border: 1px solid #992A1B;
-}
-
 // Success appears as green
-.btn-success, .btn-success:focus {
-  #gradient > .vertical(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
-  .buttonMain(#29691d, .1 );
+.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight, #fff, 0 1px 0 darken(@btnSuccessBackgroundHighlight, 10%));
 }
-
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.btn-success.disabled,
-.btn-success[disabled] {
-  #gradient > .vertical(@btnSuccessBackground, @btnSuccessBackgroundHover);
-  border: 1px solid #2D6200;
-  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-}
-
-.btn-success:active,
-.btn-success.active {
-  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
-}
-
 // Info appears as a neutral blue
-.btn-info, .btn-info:focus {
-  #gradient > .vertical(@btnInfoBackground, @btnInfoBackgroundHighlight);
-  .buttonMain(#50accf, .1 );
+.btn-info {
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight, #fff, 0 1px 0 darken(@btnInfoBackgroundHighlight, 10%));
 }
-
-.btn-info:hover,
-.btn-info:active,
-.btn-info.active,
-.btn-info.disabled,
-.btn-info[disabled] {
-  #gradient > .vertical(@btnInfoBackground, @btnInfoBackgroundHover);
-  border: 1px solid #489FC0;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
-}
-
-.btn-info:active,
-.btn-info.active {
-  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .2)");
-}
-
 // Inverse appears as dark gray
-.btn-inverse, .btn-inverse:focus {
-  #gradient > .vertical(@btnInverseBackground, @btnInverseBackgroundHighlight);
-  .buttonMain(#444, .1 );
-}
-
-.btn-inverse:hover,
-.btn-inverse:active,
-.btn-inverse.active,
-.btn-inverse.disabled,
-.btn-inverse[disabled] {
-  #gradient > .vertical(@btnInverseBackground, @btnInverseBackgroundHover);
-  border: 1px solid #333;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  .box-shadow(~"0 1px 1px rgba(0, 0, 0, .1)");
-}
-
-.btn-inverse:active,
-.btn-inverse.active {
-  .box-shadow(~"inset 0 1px 2px rgba(0, 0, 0, .3)");
+.btn-inverse {
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight, #fff, 0 1px 0 darken(@btnInverseBackgroundHighlight, 10%));
 }
 
 
