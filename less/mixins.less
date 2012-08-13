@@ -485,16 +485,16 @@
   *background-color: @endColor; // Darken IE7 buttons by default so they stand out more given they won't have borders
   .reset-filter();
 
-  //&:not(.active):hover {
-  //  #gradient > .vertical(lighten(@startColor, 4%), @endColor);
-  //}
+  &:not(.active):hover {
+    #gradient > .vertical(lighten(@endColor, 3%), darken(@endColor, 1%));
+  }
 
   // in these cases the gradient won't cover the background, so we override
   &:hover, &:active, &.active, &.disabled, &[disabled] {
     color: @textColor;
-    background-color: darken(@endColor, 1.5%);
+    background-color: darken(@endColor, 1.0%);
     *background-color: darken(@endColor, 5%);
-    .box-shadow(~"0 1px 0px #DDD");
+    .box-shadow(0 1px 0px #dedede);
   }
 
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
