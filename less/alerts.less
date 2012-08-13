@@ -10,8 +10,8 @@
   padding: 8px 35px 8px 14px;
   margin-bottom: @baseLineHeight;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  background-color: @warningBackground;
-  border: 1px solid @warningBorder;
+  background-color: lighten(@warningBackground,30%);
+  border: 1px solid lighten(@warningBorder,10%);
   .border-radius(2px);
   color: @warningText;
 }
@@ -29,19 +29,19 @@
 // -------------------------
 
 .alert-success {
-  background-color: @successBackground;
-  border-color: @successBorder;
+  background-color: lighten(@successBackground,53%);
+  border-color: lighten(@successBorder, 20%);
   color: @successText;
 }
 .alert-danger,
 .alert-error {
-  background-color: @errorBackground;
-  border-color: @errorBorder;
+  background-color: lighten(@errorBackground,40%);
+  border-color: lighten(@errorBorder,20%);
   color: @errorText;
 }
 .alert-info {
-  background-color: @infoBackground;
-  border-color: @infoBorder;
+  background-color: lighten(@infoBackground,30%);
+  border-color: lighten(@infoBorder,20%);
   color: @infoText;
 }
 

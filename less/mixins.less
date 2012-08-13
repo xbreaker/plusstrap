@@ -389,8 +389,7 @@
   color: @textColor;
   text-shadow: @textShadow;
   #gradient > .vertical(@primaryColor, @secondaryColor);
-  border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
-  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+  border-color: darken(@secondaryColor, 5%);
 }
 
 // Gradients
@@ -495,6 +494,7 @@
     background-color: darken(@endColor, 1.0%);
     *background-color: darken(@endColor, 5%);
     .box-shadow(0 1px 0px #dedede);
+    border-color: darken(@endColor, 15%);
   }
 
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
