@@ -12,7 +12,7 @@
 
 body {
   position: relative;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 /* Code in headings */
@@ -84,7 +84,15 @@ hr.soften {
 
 /* Jumbotrons
 -------------------------------------------------- */
-
+.fff {
+    background: #001F70; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #001F70 0%, #1B97EB 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#001F70), color-stop(100%,#1B97EB)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* W3C */
+}
 /* Base class
 ------------------------- */
 .jumbotron {
@@ -93,14 +101,14 @@ hr.soften {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-  background: #020031; /* Old browsers */
-  background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* IE10+ */
-  background: linear-gradient(45deg,  #020031 0%,#6d3353 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #001F70; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #001F70 0%, #1B97EB 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#001F70), color-stop(100%,#1B97EB)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #001F70 0%,#1B97EB 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001F70', endColorstr='#1B97EB',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15), inset 0 -3px 7px rgba(0,0,0,.15);
      -moz-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15), inset 0 -3px 7px rgba(0,0,0,.15);
           box-shadow: inset 0 -1px 0 rgba(0,0,0,.15), inset 0 -3px 7px rgba(0,0,0,.15);
@@ -133,9 +141,9 @@ hr.soften {
 
 /* Download button */
 @-webkit-keyframes downloadButton {
-  from { -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
-  50% {  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 25px rgba(0,68,204,.9); }
-  to {   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+  from { -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(255,255,255,.5); }
+  50% {  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 20px rgba(255,255,255,.9); }
+  to {   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(255,255,255,.5); }
 }
 .masthead .btn {
   padding: 14px 24px;
@@ -143,9 +151,9 @@ hr.soften {
   font-weight: 200;
   color: #fff; /* redeclare to override the `.jumbotron a` */
   border: 0;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
      -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
           box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
@@ -179,7 +187,7 @@ hr.soften {
   bottom: 0;
   left: 0;
   background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
-  opacity: .4;
+  opacity: .9;
 }
 
 /* Masthead (docs home)
@@ -757,9 +765,9 @@ form.bs-docs-example {
   margin-right: 10px;
   background-color: #fff;
   margin-left: 0;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
      -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
           box-shadow: 0 1px 4px rgba(0,0,0,.065);
@@ -773,14 +781,14 @@ form.bs-docs-example {
   border: 1px solid #e5e5e5;
 }
 .bs-docs-sidenav > li:first-child > a {
-  -webkit-border-radius: 6px 6px 0 0;
-     -moz-border-radius: 6px 6px 0 0;
-          border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 2px 2px 0 0;
+     -moz-border-radius: 2px 2px 0 0;
+          border-radius: 2px 2px 0 0;
 }
 .bs-docs-sidenav > li:last-child > a {
-  -webkit-border-radius: 0 0 6px 6px;
-     -moz-border-radius: 0 0 6px 6px;
-          border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 2px 2px;
+     -moz-border-radius: 0 0 2px 2px;
+          border-radius: 0 0 2px 2px;
 }
 .bs-docs-sidenav > .active > a {
   border-color: #08c;
