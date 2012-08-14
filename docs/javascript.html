@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
+          <a class="brand" href="./index.html">Plusstrap</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
@@ -60,9 +60,6 @@
               <li class="active">
                 <a href="./javascript.html">Javascript</a>
               </li>
-              <li class="">
-                <a href="./customize.html">Customize</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -73,8 +70,8 @@
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
   <div class="container">
-    <h1>JavaScript for Bootstrap</h1>
-    <p class="lead">Bring Bootstrap's components to life&mdash;now with 12 custom jQuery plugins.
+    <h1>JavaScript for Plusstrap</h1>
+    <p class="lead">Bring Plusstrap's components to life &mdash; now with 12 custom jQuery plugins.
   </div>
 </header>
 
@@ -108,14 +105,14 @@
         ================================================== -->
         <section id="overview">
           <div class="page-header">
-            <h1>JavaScript in Bootstrap</h1>
+            <h1>JavaScript in Plusstrap</h1>
           </div>
 
           <h3>Individual or compiled</h3>
-          <p>If you have downloaded the latest version of Bootstrap, both <strong>bootstrap.js</strong> and <strong>bootstrap.min.js</strong> contain all of the plugins listed on this page.</p>
+          <p>If you have downloaded the latest version of Plusstrap, both <strong>bootstrap.js</strong> and <strong>bootstrap.min.js</strong> contain all of the plugins listed on this page.</p>
 
           <h3>Data attributes</h3>
-          <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first class API and should be your first consideration when using a plugin.</p>
+          <p>You can use all Plusstrap plugins purely through the markup API without writing a single line of JavaScript. This is Plusstrap's first class API and should be your first consideration when using a plugin.</p>
 
           <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the body namespaced with `'data-api'`. This looks like this:
           <pre class="prettyprint linenums">$('body').off('.data-api')</pre>
@@ -124,7 +121,7 @@
           <pre class="prettyprint linenums">$('body').off('.alert.data-api')</pre>
 
           <h3>Programmatic API</h3>
-          <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+          <p>We also believe you should be able to use all Plusstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
           <pre class="prettyprint linenums">$(".btn.danger").button("toggle").addClass("fat")</pre>
           <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
 <pre class="prettyprint linenums">
@@ -135,7 +132,7 @@ $("#myModal").modal('show')                // initializes and invokes show immed
           <p>Each plugin also exposes it's raw constructor on a `Constructor` property: <code>$.fn.popover.Constructor</code>. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel=popover]').data('popover')</code>.</p>
 
           <h3>Events</h3>
-          <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and it's past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
+          <p>Plusstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and it's past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
           <p>All infinitive events provide preventDefault functionality. This provides the abililty to stop the execution of an action before it starts.</p>
 <pre class="prettyprint linenums">
 $('#myModal').on('show', function (e) {
@@ -340,7 +337,7 @@ $('#myModal').modal({
           <p>Manually hides a modal.</p>
           <pre class="prettyprint linenums">$('#myModal').modal('hide')</pre>
           <h3>Events</h3>
-          <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
+          <p>Plusstrap's modal class exposes a few events for hooking into modal functionality.</p>
           <table class="table table-bordered table-striped">
             <thead>
              <tr>
@@ -685,7 +682,7 @@ $('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
 </pre>
 
           <h3>Markup</h3>
-          <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
+          <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Plusstrap tab styling.</p>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-tabs"&gt;
   &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -1075,7 +1072,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
 
         <h3>Events</h3>
-        <p>Bootstrap's alert class exposes a few events for hooking into alert functionality.</p>
+        <p>Plusstrap's alert class exposes a few events for hooking into alert functionality.</p>
         <table class="table table-bordered table-striped">
           <thead>
            <tr>
@@ -1326,7 +1323,7 @@ $('#myCollapsible').collapse({
             <p>Hides a collapsible element.</p>
 
             <h3>Events</h3>
-            <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
+            <p>Plusstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
             <table class="table table-bordered table-striped">
               <thead>
                <tr>
@@ -1480,7 +1477,7 @@ $('.carousel').carousel({
             <p>Cycles to the next item.</p>
 
             <h3>Events</h3>
-            <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
+            <p>Plusstrap's carousel class exposes two events for hooking into carousel functionality.</p>
             <table class="table table-bordered table-striped">
               <thead>
                <tr>
@@ -1663,13 +1660,13 @@ $('[data-spy="affix"]').each(function () {
     <footer class="footer">
       <div class="container">
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Forked from <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> and built with all the love in the world by <a href="http://twitter.com/xbreaker" target="_blank">@xbreaker</a>.</p>
         <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
-          <li><a href="http://blog.getbootstrap.com">Read the blog</a></li>
-          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Submit issues</a></li>
-          <li><a href="https://github.com/twitter/bootstrap/wiki">Roadmap and changelog</a></li>
+          <li><a href="http://habrahabr.ru/users/xbreaker/topics/">Read the blog in Russian</a></li>
+          <li><a href="https://github.com/xbreaker/plusstrap/issues?state=open">Submit issues</a></li>
+          <li><a href="https://github.com/xbreaker/plusstrap/wiki">Roadmap and changelog</a></li>
         </ul>
       </div>
     </footer>
