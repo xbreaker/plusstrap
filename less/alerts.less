@@ -1,0 +1,62 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: @baseLineHeight;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  background-color: lighten(@warningBackground,30%);
+  border: 1px solid lighten(@warningBorder,10%);
+  .border-radius(2px);
+  color: @warningText;
+}
+
+// Adjust close link position
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: @baseLineHeight;
+}
+
+
+// Alternate styles
+// -------------------------
+
+.alert-success {
+  background-color: lighten(@successBackground,53%);
+  border-color: lighten(@successBorder, 20%);
+  color: @successText;
+}
+.alert-danger,
+.alert-error {
+  background-color: lighten(@errorBackground,40%);
+  border-color: lighten(@errorBorder,20%);
+  color: @errorText;
+}
+.alert-info {
+  background-color: lighten(@infoBackground,30%);
+  border-color: lighten(@infoBorder,20%);
+  color: @infoText;
+}
+
+
+// Block alerts
+// -------------------------
+
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+.alert-block p + p {
+  margin-top: 5px;
+}
