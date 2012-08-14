@@ -8,8 +8,8 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/pullstrap.css" rel="stylesheet">
+    <link href="assets/css/pullstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
@@ -28,7 +28,7 @@
     {{#production}}
     <script type="text/javascript">
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-146052-10']);
+      _gaq.push(['_setAccount', 'UA-34069561-1']);
       _gaq.push(['_trackPageview']);
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -72,9 +72,6 @@
               <li class="{{javascript}}">
                 <a href="./javascript.html">{{_i}}Javascript{{/i}}</a>
               </li>
-              <li class="{{customize}}">
-                <a href="./customize.html">{{_i}}Customize{{/i}}</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -90,13 +87,13 @@
     <footer class="footer">
       <div class="container">
         <p class="pull-right"><a href="#">{{_i}}Back to top{{/i}}</a></p>
-        <p>{{_i}}Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.{{/i}}</p>
+        <p>{{_i}}Forked from <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> and built with all the love in the world by <a href="http://twitter.com/xbreaker" target="_blank">@xbreaker</a>.{{/i}}</p>
         <p>{{_i}}Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.{{/i}}</p>
         <p>{{_i}}Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.{{/i}}</p>
         <ul class="footer-links">
           <li><a href="http://blog.getbootstrap.com">{{_i}}Read the blog{{/i}}</a></li>
-          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">{{_i}}Submit issues{{/i}}</a></li>
-          <li><a href="https://github.com/twitter/bootstrap/wiki">{{_i}}Roadmap and changelog{{/i}}</a></li>
+          <li><a href="https://github.com/xbreaker/plusstrap/issues?state=open">{{_i}}Submit issues{{/i}}</a></li>
+          <li><a href="https://github.com/xbreaker/plusstrap/wiki">{{_i}}Roadmap and changelog{{/i}}</a></li>
         </ul>
       </div>
     </footer>
@@ -123,25 +120,6 @@
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/bootstrap-affix.js"></script>
     <script src="assets/js/application.js"></script>
-
-
-    {{#production}}
-    <!-- Analytics
-    ================================================== -->
-    <script>
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
-    {{/production}}
 
   </body>
 </html>
