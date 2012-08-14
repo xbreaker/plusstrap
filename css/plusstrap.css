@@ -149,6 +149,9 @@ a:hover {
   color: #0161fd;
   text-decoration: underline;
 }
+a:active {
+  color: #dd4b39;
+}
 .img-rounded {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
