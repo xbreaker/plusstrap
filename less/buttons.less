@@ -14,12 +14,14 @@
   font-weight: bold;
   margin-bottom: 0; // For input.btn
   font-size: @baseFontSize - 2px;
-  line-height: @baseLineHeight + 2px;
-  *line-height: @baseLineHeight + 2px;
+  line-height: @baseLineHeight + 3px;
+  *line-height: @baseLineHeight + 3px;
+  min-width: @baseLineHeight;
   text-align: center;
   vertical-align: middle;
   cursor: default;
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  outline: 0;
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.1));
   border: 1px solid @btnBorder;
   *border: 0; // Remove the border to prevent IE7's black border on input:focus
   border-bottom-color: darken(@btnBorder, 10%);
@@ -140,27 +142,27 @@
   border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
 }
 .btn-primary {
-  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight, #fff, 0 1px 0 darken(@btnPrimaryBackgroundHighlight, 10%));
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight, #fff, 0 1px rgba(0, 0, 0, 0.1));
 }
 // Warning appears are orange
 .btn-warning {
-  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight, #fff, 0 1px 0 darken(@btnWarningBackgroundHighlight, 10%));
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight, #fff, 0 1px rgba(0, 0, 0, 0.1));
 }
 // Danger and error appear as red
 .btn-danger {
-  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight, #fff, 0 1px 0 darken(@btnDangerBackgroundHighlight, 10%));
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight, #fff, 0 1px rgba(0, 0, 0, 0.1));
 }
 // Success appears as green
 .btn-success {
-  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight, #fff, 0 1px 0 darken(@btnSuccessBackgroundHighlight, 10%));
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight, #fff, 0 1px rgba(0, 0, 0, 0.1));
 }
 // Info appears as a neutral blue
 .btn-info {
-  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight, #fff, 0 1px 0 darken(@btnInfoBackgroundHighlight, 10%));
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight, #fff, 0 1px rgba(0, 0, 0, 0.1));
 }
 // Inverse appears as dark gray
 .btn-inverse {
-  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight, #fff, 0 1px 0 darken(@btnInverseBackgroundHighlight, 10%));
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight, #fff, 0 1px rgba(0, 0, 0, 0.1));
 }
 
 

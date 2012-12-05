@@ -385,7 +385,7 @@
 }
 
 // Gradient Bar Colors for buttons and alerts
-.gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+.gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 1px 0 rgba(0,0,0,.1)) {
   color: @textColor;
   text-shadow: @textShadow;
   #gradient > .vertical(@primaryColor, @secondaryColor);
@@ -405,7 +405,7 @@
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
   }
   .vertical(@startColor: #555, @endColor: #333) {
-    background-color: mix(@startColor, @endColor, 60%);
+    background-color: @endColor;
     background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
     background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
@@ -485,7 +485,7 @@
   .reset-filter();
 
   &:not(.active):hover {
-    #gradient > .vertical(lighten(@endColor, 3%), darken(@endColor, 1%));
+    #gradient > .vertical(@startColor, darken(@endColor, 3.9%));
   }
 
   // in these cases the gradient won't cover the background, so we override
@@ -494,7 +494,7 @@
     background-color: darken(@endColor, 1.0%);
     *background-color: darken(@endColor, 5%);
     .box-shadow(0 1px 0px #dedede);
-    border-color: darken(@endColor, 15%);
+    border-color: darken(@endColor, 10%);
   }
 
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
