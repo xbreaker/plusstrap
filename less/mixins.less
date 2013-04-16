@@ -369,14 +369,14 @@
 // and disabled options for all buttons
 .btn-pseudo-states(@one, @two) {
   .btn-grd(@one, @two);
-  border: 0;
+  border: 1px solid @two;
   color: #fff !important;
-  padding: 7px 12px;
   text-shadow: none;
 
   &:hover,
   &:focus{
     .btn-grd(darken(@one, 2%), darken(@two, 2%));
+    border: 1px solid darken(@two, 2%);
     color: #fff !important;
   }
 
@@ -394,6 +394,7 @@
     &:active,
     &.active {
       .btn-grd(lighten(@one, 18.7%), lighten(@two, 25%));
+      border: 1px solid lighten(@two, 25%);
     }
   }
 }
