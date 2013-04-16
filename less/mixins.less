@@ -353,31 +353,47 @@
   border-bottom: 1px solid @bottom;
 }
 
+// Button Gradients
+.btn-grd(@one, @two) {
+  background-color: @two;
+  background-image: -o-linear-gradient(top,@one,@two); // Opera 11.10
+  background-image: -moz-linear-gradient(top,@one,@two);
+  background-image: -webkit-linear-gradient(top,@one,@two);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,@one),color-stop(1,@two));
+  background-image: linear-gradient(top,@one,@two);
+}
+
 // Button psuedo states
 // -------------------------
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-.btn-pseudo-states(@background, @border) {
-  background-color: @background;
-  border-color: @border;
+.btn-pseudo-states(@one, @two) {
+  .btn-grd(@one, @two);
+  border: 0;
+  color: #fff !important;
+  padding: 7px 12px;
+  text-shadow: none;
 
   &:hover,
-  &:focus,
+  &:focus{
+    .btn-grd(darken(@one, 2%), darken(@two, 2%));
+    color: #fff !important;
+  }
+
   &:active,
   &.active {
-    background-color: darken(@background, 5%);
-        border-color: darken(@border, 10%);
+    .box-shadow(inset 0 2px 4px rgba(0,0,0,.24));
   }
 
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
+    &,
     &:hover,
     &:focus,
     &:active,
     &.active {
-      background-color: @background;
-          border-color: @border
+      .btn-grd(lighten(@one, 18.7%), lighten(@two, 25%));
     }
   }
 }
