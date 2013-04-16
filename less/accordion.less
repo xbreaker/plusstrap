@@ -11,15 +11,35 @@
 // Group == heading + body
 .accordion-group {
   margin-bottom: 2px;
-  border: 1px solid #e5e5e5;
-  border-radius: @border-radius-base;
 }
 .accordion-heading {
-  border-bottom: 0;
+  margin: 0;
+  outline: none;
+     -moz-transition: all 750ms ease-in-out 0;
+  -webkit-transition: all 750ms ease-in-out 0;
+          transition: all 750ms ease-in-out 0;
 }
 .accordion-heading .accordion-toggle {
+  background: #f6f9ff;
+  border: 1px solid #eff2f9;
+     -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  color: #444;
   display: block;
-  padding: 8px 15px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: 5px 10px;
+  position: relative;
+  text-decoration: none;
+  top: -1px;
+     -moz-transition: -moz-background 500ms ease-in-out 0;
+  -webkit-transition: -webkit-background 500ms ease-in-out 0;
+          transition: background 500ms ease-in-out 0;
+}
+.accordion-heading .accordion-toggle:hover {
+  background: #5e94ff;
+  color: #fff;
 }
 
 // General toggle styles
@@ -29,6 +49,5 @@
 
 // Inner needs the styles because you can't animate properly with any styles on the element
 .accordion-inner {
-  padding: 9px 15px;
-  border-top: 1px solid #e5e5e5;
+  padding: 10px 15px;
 }
