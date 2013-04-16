@@ -6,10 +6,26 @@
 
   $(function(){
 
+    var $window = $(window)
+
     // Disable certain links in docs
     $('section [href^=#]').click(function (e) {
       e.preventDefault()
     })
+
+    // back to top
+    // setTimeout(function () {
+    //   $('.bs-docs-sidenav').affix({
+    //     offset: {
+    //       top: function () { return $window.width() <= 980 ? 290 : 210 }
+    //     , bottom: 270
+    //     }
+    //   })
+    // }, 100)
+
+    setTimeout(function () {
+      $('.bs-docs-top').affix()
+    }, 100)
 
     // make code pretty
     window.prettyPrint && prettyPrint()
@@ -21,38 +37,29 @@
       $(this).parents('.add-on')[method]('active')
     })
 
-    // position static twipsies for components page
-    if ($(".twipsies a").length) {
-      $(window).on('load resize', function () {
-        $(".twipsies a").each(function () {
-          $(this)
-            .tooltip({
-              placement: $(this).attr('title')
-            , trigger: 'manual'
-            })
-            .tooltip('show')
-          })
-      })
-    }
-
     // add tipsies to grid for scaffolding
-    if ($('#gridSystem').length) {
-      $('#gridSystem').tooltip({
-          selector: '.show-grid > div'
+    if ($('#grid-system').length) {
+      $('#grid-system').tooltip({
+          selector: '.show-grid > [class*="span"]'
         , title: function () { return $(this).width() + 'px' }
       })
     }
 
     // tooltip demo
     $('.tooltip-demo').tooltip({
-      selector: "a[rel=tooltip]"
+      selector: "a[data-toggle=tooltip]"
     })
 
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
 
+    $('.bs-docs-navbar').tooltip({
+      selector: "a[data-toggle=tooltip]",
+      container: ".bs-docs-navbar .nav"
+    })
+
     // popover demo
-    $("a[rel=popover]")
+    $("a[data-toggle=popover]")
       .popover()
       .click(function(e) {
         e.preventDefault()
@@ -69,7 +76,7 @@
       })
 
     // carousel demo
-    $('#myCarousel').carousel()
+    $('.bs-docs-carousel-example').carousel()
 
     // javascript build logic
     var inputsComponent = $("#components.download input")
@@ -93,7 +100,7 @@
     })
 
     // request built javascript
-    $('.download-btn').on('click', function () {
+    $('.download-btn .btn').on('click', function () {
 
       var css = $("#components.download input:checked")
             .map(function () { return this.value })
