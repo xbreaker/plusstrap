@@ -5,8 +5,8 @@
 // Wrapper and base class
 .navbar {
   position: relative;
-  padding: 10px 15px;
-  background-color: @navbar-bg;
+  .btn-grd(#4e78c2, #325da7);
+  padding: 0 15px;
   border-radius: @border-radius-base;
   // Prevent floats from breaking the navbar
   .clearfix();
@@ -30,12 +30,14 @@
   .nav > li > a:focus {
     color: @navbar-link-hover-color;
     background-color: @navbar-link-hover-bg;
+    text-decoration: underline;
   }
   .nav > .active > a,
   .nav > .active > a:hover,
   .nav > .active > a:focus {
     color: @navbar-link-active-color;
     background-color: @navbar-link-active-bg;
+    font-weight: bold;
   }
   .nav > .disabled > a,
   .nav > .disabled > a:hover,
@@ -187,6 +189,7 @@
 // --------------------------------------------------
 
 .navbar-inverse {
+  background-image: none;
   background-color: @navbar-inverse-bg;
 
   .navbar-brand {
@@ -194,8 +197,9 @@
     &:hover,
     &:focus {
       color: @navbar-inverse-brand-hover-color;
-      background-color: @navbar-inverse-brand-hover-bg;
+      background-color: @navbar-inverse-brand-bg;
     }
+    background-color: @navbar-inverse-brand-bg; 
   }
 
   .navbar-text {
@@ -215,6 +219,7 @@
   .nav > .active > a:focus {
     color: @navbar-inverse-link-active-color;
     background-color: @navbar-inverse-link-active-bg;
+    text-decoration: underline;
   }
   .nav > .disabled > a,
   .nav > .disabled > a:hover,
@@ -278,7 +283,8 @@
     float: left;
     padding-top: ((@navbar-height - @line-height-base) / 2);
     padding-bottom: ((@navbar-height - @line-height-base) / 2);
-    margin-left: -10px;
+    margin-left: -15px;
+    border-radius: @border-radius-base 0 0 @border-radius-base;
   }
   .navbar .nav {
     float: left;
@@ -304,7 +310,7 @@
   }
   // Since we override the border, we need to specify it again for inverted navbars
   .navbar-inverse .nav > .divider {
-    border-right-color: lighten(@navbar-inverse-bg, 5%);
+    border-right-color: darken(@navbar-inverse-bg, 15%);
   }
 
   .navbar-fixed-left {
