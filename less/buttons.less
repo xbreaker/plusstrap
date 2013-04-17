@@ -10,7 +10,7 @@
 .btn {
   .btn-grd(@btn-bg-l, @btn-bg-d);
   border: 1px solid @btn-border;
-  border-radius: 2px;
+  border-radius: @border-radius-small;
   color: @btn-color;
   cursor: pointer;
   display: inline-block;
@@ -149,7 +149,7 @@ fieldset[disabled] .btn-link {
   color: @link-color;
   font-weight: normal;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: @border-radius-small;
 }
 .btn-link:hover,
 .btn-link:focus {
