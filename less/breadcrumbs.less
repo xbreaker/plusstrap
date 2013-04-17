@@ -4,25 +4,30 @@
 
 
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 0px 15px;
   margin: 0 0 @line-height-base;
   list-style: none;
-  background-color: #f5f5f5;
-  border-radius: @border-radius-base;
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: @border-radius-small;
   > li {
     display: inline-block;
     text-shadow: 0 1px 0 #fff;
+    /*
     &:after {
       display: inline-block;
       content: "\00a0 /"; // Unicode space added since inline-block means non-collapsing white-space
       padding: 0 5px;
       color: #ccc;
     }
-    &:last-child:after {
-      content: ""; // No divider after last element
-    }
+    */
+    margin: 0 7px 0 0;
+    padding: 4px 15px 4px 0;
+    background: url("data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAA0AAAAyCAMAAACwGaE2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEVQTFRF7%2B%2Fv5ubm8fHx5eXl%2BPj47u7u9PT06enp7e3t9%2Ff38PDw9fX18vLy6urq6Ojo6%2Bvr5OTk4%2BPj9vb28%2FPz7Ozs%2Bfn5%2F%2F%2F%2FoCjp%2BgAAABd0Uk5T%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwDmQOZeAAAAo0lEQVR42nTSSRLDIAxEUYHnMSO6%2F1FjW8J8FmH3qsumQUhSLOlJGWoxlM9G6b5Q6yNB%2BnpT8Uvpc6LmkdKmpZY9Qbp5IVM%2FUOptXd7W5W2zrG2Wtb11tb11tS062xadbSHpqBSqTKrv%2BJcjKkoNd5cZagPP0EXIoiyLXFPgDY4RypFpXKs5cCoiUGo4zathVhv4JryGidFxUZEK1YvU%2F%2FoJMAALAzLRLGBHPgAAAABJRU5ErkJggg%3D%3D") no-repeat center right;
+    overflow: hidden;
   }
   > .active {
-    color: @grayLight;
+    color: @gray;
+    background: none; // No divider after last element
   }
 }
