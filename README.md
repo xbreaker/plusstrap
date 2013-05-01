@@ -70,7 +70,7 @@ Twitter Bootstrap Authors
 **Mark Otto**
 
 + http://twitter.com/mdo
-+ http://github.com/markdotto
++ http://github.com/mdo
 
 **Jacob Thornton**
 
